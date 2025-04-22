@@ -91,12 +91,13 @@ def rollout(actor, critic, env, gamma=0.99, lamb=0.95):
 
 
 def ppo_loss(actor, critic, states, actions, log_probs, returns, advantages, epsilon = 0.2):
+    states, actions, log_probs, returns, advantages = map(lambda x: torch.vstack(x), (states, actions, log_probs, list(returns), list(advantages)))
     _, new_log_probs = actor(states, actions)
     values = critic(states).squeeze(-1)
-    ratio = torch.exp(new_log_probs - log_probs)
+    ratio = torch.exp(new_log_probs - log_probs.squeeze(-1))
     clip_ratio =  torch.clip(ratio, 1 - epsilon, 1 + epsilon)
-    policy_loss = - torch.min(ratio * advantages, clip_ratio * advantages).mean()
-    value_loss = F.mse_loss(values, returns)
+    policy_loss = - torch.min(ratio * advantages.squeeze(-1), clip_ratio * advantages.squeeze(-1)).mean()
+    value_loss = F.mse_loss(values, returns.squeeze(-1))
     total_loss = policy_loss + value_loss
     return total_loss
 
@@ -120,13 +121,19 @@ def main():
     optimizer_actor = torch.optim.Adam(actor.parameters())
     optimizer_critic = torch.optim.Adam(critic.parameters())
 
-    total_steps = 1e6
     total_count = 0
     while True:
         result, episode_reward, count = rollout(actor, critic, env)
         total_loss = ppo_loss(actor, critic, result['states'], result['actions'], result['log_probs'], result['returns'], result['advantages'])
-        break
-        
+        optimizer_actor.zero_grad()
+        optimizer_critic.zero_grad()
+        total_loss.backward()
+        optimizer_actor.step()
+        optimizer_critic.step()
+        print(f"Episode {total_count}, Reward: {episode_reward}, Loss: {total_loss}")
+        total_count += 1
+        if total_count > 1e6:
+            break
 
 
 if __name__ == "__main__":
