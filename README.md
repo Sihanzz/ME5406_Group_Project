@@ -4,14 +4,6 @@ This repository contains an implementation of Proximal Policy Optimization (PPO)
 
 This repository also implements the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm for controlling the Humanoid-v5 environment in Gymnasium. The implementation includes training and testing scripts with comprehensive visualization capabilities.
 
-## Demo
-
-### PPO Training Demo
-![PPO Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/ppo.gif)
-
-### TD3 Training Demo  
-![TD3 Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/td3.gif)
-
 
 ## Swith to different Branch
 
@@ -26,6 +18,18 @@ Check D4PG-xcn branch's README for instructions of training DDPG and D4PG
 git checkout ???
 ```
 Check ??? branch's README for instructions of training SAC
+
+
+## Demo
+
+### PPO Training Demo
+![PPO Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/ppo.gif)
+![TD3 Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/1.png)
+
+### TD3 Training Demo  
+![TD3 Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/td3.gif)
+![TD3 Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/5.png)
+
 
 
 ## Project Structure
