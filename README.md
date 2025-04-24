@@ -7,10 +7,10 @@ This repository also implements the Twin Delayed Deep Deterministic Policy Gradi
 ## Demo
 
 ### PPO Training Demo
-![PPO Humanoid Training](https://github.com/Sihanzz/rl-repo/ppo.gif)
+![PPO Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/ppo.gif)
 
 ### TD3 Training Demo  
-![TD3 Humanoid Training](https://github.com/Sihanzz/rl-repo/td3.gif)
+![TD3 Humanoid Training](https://github.com/Sihanzz/rl-repo/blob/main/td3.gif)
 
 
 ## Swith to different Branch
