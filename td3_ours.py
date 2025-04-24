@@ -240,8 +240,10 @@ def test():
 
     # Create and load actor network
     actor = Actor(state_dim, action_dim, max_action)
-    checkpoint = torch.load('models/best_model.pth', weights_only=False)
+    checkpoint = torch.load('models/best_model.pth', weights_only=False, map_location='cpu')
+    # checkpoint = torch.load('humanoid/runs/td3-ours/models/best_model.pth', weights_only=False, map_location='cpu')
     actor.load_state_dict(checkpoint['actor_state_dict'])
+    print(checkpoint['best_reward'])
     actor.eval()
 
     # Run episodes indefinitely
