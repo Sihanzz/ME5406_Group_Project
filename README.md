@@ -1,8 +1,23 @@
-# PPO and TD3 Implementation for Humanoid Control
+# PPO and TD3 Implementation for Humanoid Control (main branch)
 
 This repository contains an implementation of Proximal Policy Optimization (PPO) for training a humanoid agent in the MuJoCo environment. The implementation features parallel environment training, generalized advantage estimation (GAE), and a Beta distribution-based policy network.
 
 This repository also implements the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm for controlling the Humanoid-v5 environment in Gymnasium. The implementation includes training and testing scripts with comprehensive visualization capabilities.
+
+## Swith to different Branch
+
+### Swith to DDPG and D4PG branch
+```
+git checkout D4PG-xcn
+```
+Check D4PG-xcn branch's README for instructions of training DDPG and D4PG
+
+### Switch to SAC branch
+```
+git checkout ???
+```
+Check ??? branch's README for instructions of training SAC
+
 
 ## Project Structure
 
@@ -34,21 +49,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 git clone https://github.com/Sihanzz/rl-repo.git
 ```
-
-## Swith to different Branch
-
-### Swith to DDPG and D4PG branch
-```
-git checkout D4PG-xcn
-```
-Check D4PG-xcn branch's README for instructions of training DDPG and D4PG
-
-### Switch to SAC branch
-```
-git checkout ???
-```
-Check ??? branch's README for instructions of training SAC
-
 ## PPO Usage
 ### Switch to main branch
 ```
