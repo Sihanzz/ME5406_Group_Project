@@ -175,6 +175,10 @@ The implementation follows the original TD3 paper with several optimizations:
 ## References
 - Fujimoto et al. (2018) "Addressing Function Approximation Error in Actor-Critic Methods"
 - Original TD3 paper: https://arxiv.org/abs/1802.09477
+- Schulman et al. (2017) "Proximal Policy Optimization Algorithms"
+- Original PPO paper: https://arxiv.org/abs/1707.06347
+- CleanRL implementation reference: https://github.com/vwxyzjn/cleanrl
+
 
 ## License
 This project is open source and available under the MIT License.
