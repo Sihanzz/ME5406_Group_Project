@@ -1,6 +1,6 @@
 # Humanoid Robot Walking Using Reinforcement Learning in MuJoCo
 
-This is a group project for MUS ME5406 Part II, we are Group 8.
+This is a group project for NUS ME5406 Part II, we are Group 8.
 
 ## Overview
 
