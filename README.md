@@ -1,3 +1,19 @@
+# Humanoid Robot Walking Using Reinforcement Learning in MuJoCo
+
+This is a group project for MUS ME5406 Part II, we are Group 8.
+
+## Overview
+
+This project implements various reinforcement learning algorithms to train a humanoid robot to walk in the MuJoCo environment. Our team members have implemented different algorithms:
+
+- Dong Sihan: PPO and TD3
+- Hu Bowen: SAC
+- Xu Chunnan: DDPG and D4PG
+
+Each algorithm is implemented with comprehensive training frameworks and visualization tools to analyze and compare their performance in the humanoid walking task.
+
+
+
 # PPO and TD3 Implementation for Humanoid Control (main branch)
 
 This repository contains an implementation of Proximal Policy Optimization (PPO) for training a humanoid agent in the MuJoCo environment. The implementation features parallel environment training, generalized advantage estimation (GAE), and a Beta distribution-based policy network.
@@ -36,10 +52,10 @@ Check loggcc-branch branch's README for instructions of training SAC
 
 - `ppo_ours.py`: Main training script containing the PPO implementation
 - `td3_ours.py` Main TD3 implementation file
-- `runs/`: Directory containing current tensorboard logs
-- `data_best/`: Directory for storing the best model checkpoints for PPO
-- `humanoid/`: Directory containing our pretrained tensorboard logs
-─ `models/` Directory for saved models for TD3
+- `runs/`: Directory containing current tensorboard logs (for ongoing training)
+- `data_best/`: Directory for storing the best model checkpoints for PPO (model_best.pt)
+- `humanoid/`: Directory containing pretrained tensorboard logs (for reference)
+- `models/`: Directory for saved TD3 model weights (best_model.pth)
 
 ## Dependencies
 
@@ -60,7 +76,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 2. Clone Repo:
 ```
-git clone https://github.com/Sihanzz/rl-repo.git
+git clone https://github.com/Sihanzz/ME5406_Group_Project.git
 ```
 ## PPO Usage
 ### Switch to main branch
@@ -107,6 +123,8 @@ This will start a TensorBoard server where you can visualize:
 - Policy and value losses
 - Entropy
 - Learning rate
+
+Note: If you encounter any issues with tensorboard, make sure you have activated the correct virtual environment and installed all dependencies.
 
 ### PPO Model Checkpoints
 
