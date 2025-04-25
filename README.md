@@ -15,9 +15,9 @@ Check D4PG-xcn branch's README for instructions of training DDPG and D4PG
 
 ### Switch to SAC branch
 ```
-git checkout ???
+git checkout loggcc-branch
 ```
-Check ??? branch's README for instructions of training SAC
+Check loggcc-branch branch's README for instructions of training SAC
 
 
 ## Demo
